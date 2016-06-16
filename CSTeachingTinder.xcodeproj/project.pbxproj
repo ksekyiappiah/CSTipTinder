@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0119461D11BBA900F28850 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119451D11BBA900F28850 /* DraggableView.swift */; };
+		2B0119481D11BC8200F28850 /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */; };
+		2B01194A1D11BD0400F28850 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119491D11BD0400F28850 /* OverlayView.swift */; };
 		2B822FF81D0F4DEA00FC8562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */; };
 		2B822FFA1D0F4DEA00FC8562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B822FF91D0F4DEA00FC8562 /* ViewController.swift */; };
 		2B822FFD1D0F4DEA00FC8562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B822FFB1D0F4DEA00FC8562 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0119451D11BBA900F28850 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
+		2B0119491D11BD0400F28850 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		2B822FF41D0F4DEA00FC8562 /* CSTeachingTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTeachingTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B822FF91D0F4DEA00FC8562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 			children = (
 				2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */,
 				2B822FF91D0F4DEA00FC8562 /* ViewController.swift */,
+				2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */,
+				2B0119451D11BBA900F28850 /* DraggableView.swift */,
+				2B0119491D11BD0400F28850 /* OverlayView.swift */,
 				2B822FFB1D0F4DEA00FC8562 /* Main.storyboard */,
 				2B822FFE1D0F4DEA00FC8562 /* Assets.xcassets */,
 				2B8230001D0F4DEA00FC8562 /* LaunchScreen.storyboard */,
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0119481D11BC8200F28850 /* DraggableViewBackground.swift in Sources */,
+				2B0119461D11BBA900F28850 /* DraggableView.swift in Sources */,
 				2B822FFA1D0F4DEA00FC8562 /* ViewController.swift in Sources */,
 				2B822FF81D0F4DEA00FC8562 /* AppDelegate.swift in Sources */,
+				2B01194A1D11BD0400F28850 /* OverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +496,7 @@
 				2B82301E1D0F4DEA00FC8562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B82301F1D0F4DEA00FC8562 /* Build configuration list for PBXNativeTarget "CSTeachingTinderTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				2B8230211D0F4DEA00FC8562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B8230221D0F4DEA00FC8562 /* Build configuration list for PBXNativeTarget "CSTeachingTinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				2B8230241D0F4DEA00FC8562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
