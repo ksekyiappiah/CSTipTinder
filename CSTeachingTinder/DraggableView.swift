@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import WebKit
+
 
 let ACTION_MARGIN: Float = 120      //%%% distance from center where the action applies. Higher = swipe further in order for the action to be called
 let SCALE_STRENGTH: Float = 4       //%%% how quickly the card shrinks. Higher = slower shrinking
@@ -18,13 +20,14 @@ let ROTATION_ANGLE: Float = 3.14/8  //%%% Higher = stronger rotation angle
 let CARD_HEIGHT: CGFloat = 386 //height of card
 let CARD_WIDTH: CGFloat = 290 //width of card
 
+
 protocol DraggableViewDelegate {
     func cardSwipedLeft(card: UIView) -> Void
     func cardSwipedRight(card: UIView) -> Void
     
 }
 
-class DraggableView: UIView {
+class DraggableView: UIView, WKNavigationDelegate {
     var delegate: DraggableViewDelegate!
     var panGestureRecognizer: UIPanGestureRecognizer!
     var originPoint: CGPoint!
@@ -36,6 +39,8 @@ class DraggableView: UIView {
     var front: UIImageView!
     var back: UIImageView!
     var cardView: UIImageView!
+    var containerView : UIView? = nil
+    var webView: WKWebView!
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -180,8 +185,9 @@ class DraggableView: UIView {
     }
     
     func expandAction() -> Void {
+      
        
-        front = UIImageView(image: UIImage(named: "checkButton"))
+         /* front = UIImageView(image: UIImage(named: "checkButton"))
         back = UIImageView(image: UIImage(named: "xButton"))
     
 
@@ -192,6 +198,10 @@ class DraggableView: UIView {
             UIView.transitionFromView(back, toView: front, duration: 5, options: UIViewAnimationOptions.CurveEaseIn, completion: nil)
             showingFront = true
         }
-     
+     */
+        
+        let url = NSURL(string: "https://www.hackingwithswift.com")
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
     }
 }

@@ -7,10 +7,10 @@
 //
 
 import UIKit
-//import WebKit
+import WebKit
 
 
-class ViewController: UIViewController /*WKNavigationDelegate */{
+class ViewController: UIViewController, WKNavigationDelegate{
 
     
     
@@ -31,6 +31,8 @@ class ViewController: UIViewController /*WKNavigationDelegate */{
     }
     
     
+    
   
+    
 }
 
