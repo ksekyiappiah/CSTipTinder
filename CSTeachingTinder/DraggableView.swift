@@ -15,10 +15,13 @@ let SCALE_MAX:Float = 0.93          //%%% upper bar for how much the card shrink
 let ROTATION_MAX: Float = 1         //%%% the maximum rotation allowed in radians.  Higher = card can keep rotating longer
 let ROTATION_STRENGTH: Float = 320  //%%% strength of rotation. Higher = weaker rotation
 let ROTATION_ANGLE: Float = 3.14/8  //%%% Higher = stronger rotation angle
+let CARD_HEIGHT: CGFloat = 386 //height of card
+let CARD_WIDTH: CGFloat = 290 //width of card
 
 protocol DraggableViewDelegate {
     func cardSwipedLeft(card: UIView) -> Void
     func cardSwipedRight(card: UIView) -> Void
+    
 }
 
 class DraggableView: UIView {
@@ -29,6 +32,11 @@ class DraggableView: UIView {
     var information: UILabel!
     var xFromCenter: Float!
     var yFromCenter: Float!
+    var showingFront = true
+    var front: UIImageView!
+    var back: UIImageView!
+    var cardView: UIImageView!
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -169,5 +177,21 @@ class DraggableView: UIView {
                 self.removeFromSuperview()
         })
         delegate.cardSwipedLeft(self)
+    }
+    
+    func expandAction() -> Void {
+       
+        front = UIImageView(image: UIImage(named: "checkButton"))
+        back = UIImageView(image: UIImage(named: "xButton"))
+    
+
+        if (showingFront) {
+            UIView.transitionFromView(front, toView: back, duration: 5, options: UIViewAnimationOptions.CurveEaseOut, completion: nil)
+            showingFront = false
+        } else {
+            UIView.transitionFromView(back, toView: front, duration: 5, options: UIViewAnimationOptions.CurveEaseIn, completion: nil)
+            showingFront = true
+        }
+     
     }
 }

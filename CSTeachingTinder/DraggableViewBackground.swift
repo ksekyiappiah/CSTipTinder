@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class DraggableViewBackground: UIView, DraggableViewDelegate {
     var exampleCardLabels: [String]!
     var allCards: [DraggableView]!
@@ -23,6 +24,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var messageButton: UIButton!
     var checkButton: UIButton!
     var xButton: UIButton!
+    var expandButton: UIButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -32,7 +34,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         self.setupView()
-        exampleCardLabels = ["first", "second", "third", "fourth", "last"]
+        exampleCardLabels = ["first", "second", "third", "fourth", "fifth", "sixth"]
         allCards = []
         loadedCards = []
         cardsLoadedIndex = 0
@@ -40,7 +42,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     }
     
     func setupView() -> Void {
-        self.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.95, alpha: 1)
+        self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         
         xButton = UIButton(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2 + 35, self.frame.size.height/2 + CARD_HEIGHT/2 + 10, 59, 59))
         xButton.setImage(UIImage(named: "xButton"), forState: UIControlState.Normal)
@@ -50,8 +52,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         checkButton.setImage(UIImage(named: "checkButton"), forState: UIControlState.Normal)
         checkButton.addTarget(self, action: "swipeRight", forControlEvents: UIControlEvents.TouchUpInside)
         
+        expandButton = UIButton(frame: CGRectMake(self.frame.size.width/2 - 30, self.frame.size.height/2 + CARD_HEIGHT/2 + 10, 70, 70))
+        expandButton.setImage(UIImage(named: "expandButton"), forState: UIControlState.Normal)
+        expandButton.addTarget(self, action: "expandPage", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
         self.addSubview(xButton)
         self.addSubview(checkButton)
+        self.addSubview(expandButton)
     }
     
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
@@ -103,6 +111,8 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         }
     }
     
+  
+    
     func swipeRight() -> Void {
         if loadedCards.count <= 0 {
             return
@@ -127,5 +137,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             dragView.overlayView.alpha = 1
         })
         dragView.leftClickAction()
+    }
+    
+    func expandPage() -> Void {
+        if loadedCards.count <= 0 {
+            return
+        }
+        let dragView: DraggableView = loadedCards[0]
+        dragView.expandAction()
+        
     }
 }

@@ -12,6 +12,7 @@ import UIKit
 enum GGOverlayViewMode {
     case GGOverlayViewModeLeft
     case GGOverlayViewModeRight
+
 }
 
 class OverlayView: UIView{
