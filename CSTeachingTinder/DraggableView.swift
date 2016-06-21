@@ -35,12 +35,7 @@ class DraggableView: UIView, WKNavigationDelegate {
     var information: UILabel!
     var xFromCenter: Float!
     var yFromCenter: Float!
-    var showingFront = true
-    var front: UIImageView!
-    var back: UIImageView!
-    var cardView: UIImageView!
-    var containerView : UIView? = nil
-    var webView: WKWebView!
+ 
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -184,24 +179,7 @@ class DraggableView: UIView, WKNavigationDelegate {
         delegate.cardSwipedLeft(self)
     }
     
-    func expandAction() -> Void {
-      
-       
-         /* front = UIImageView(image: UIImage(named: "checkButton"))
-        back = UIImageView(image: UIImage(named: "xButton"))
     
-
-        if (showingFront) {
-            UIView.transitionFromView(front, toView: back, duration: 5, options: UIViewAnimationOptions.CurveEaseOut, completion: nil)
-            showingFront = false
-        } else {
-            UIView.transitionFromView(back, toView: front, duration: 5, options: UIViewAnimationOptions.CurveEaseIn, completion: nil)
-            showingFront = true
-        }
-     */
-        
-        let url = NSURL(string: "https://www.hackingwithswift.com")
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
-    }
+   
+   
 }

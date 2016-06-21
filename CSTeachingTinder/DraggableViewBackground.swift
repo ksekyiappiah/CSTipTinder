@@ -52,14 +52,12 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         checkButton.setImage(UIImage(named: "checkButton"), forState: UIControlState.Normal)
         checkButton.addTarget(self, action: "swipeRight", forControlEvents: UIControlEvents.TouchUpInside)
         
-        expandButton = UIButton(frame: CGRectMake(self.frame.size.width/2 - 30, self.frame.size.height/2 + CARD_HEIGHT/2 + 10, 70, 70))
-        expandButton.setImage(UIImage(named: "expandButton"), forState: UIControlState.Normal)
-        expandButton.addTarget(self, action: "expandPage", forControlEvents: UIControlEvents.TouchUpInside)
+       
         
-        
+    
         self.addSubview(xButton)
         self.addSubview(checkButton)
-        self.addSubview(expandButton)
+       
     }
     
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
@@ -139,12 +137,30 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         dragView.leftClickAction()
     }
     
-    func expandPage() -> Void {
-        if loadedCards.count <= 0 {
-            return
+    func countLikes() -> Int {
+        var count = 0
+        for var i = 0; i < loadedCards.count; ++i {
+            if canPerformAction(#selector(DraggableViewBackground.swipeLeft), withSender: DraggableView.self) {
+                count += 1
+            }
         }
-        let dragView: DraggableView = loadedCards[0]
-        dragView.expandAction()
+        
+        return count
+        
+        
         
     }
+    
+    func countDislikes() -> Int {
+        var count = 0
+        for var i = 0; i < loadedCards.count; ++i {
+            if canPerformAction(#selector(DraggableViewBackground.swipeRight), withSender: DraggableView.self) {
+                count += 1
+            }
+        }
+        
+        return count
+    }
+    
+    
 }
