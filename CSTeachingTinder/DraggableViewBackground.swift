@@ -11,7 +11,8 @@ import UIKit
 
 
 class DraggableViewBackground: UIView, DraggableViewDelegate {
-    var exampleCardLabels: [String]!
+    var exampleCardLabels = [String]()
+    //var exampleCardLabels: [String]!
     var allCards: [DraggableView]!
     
     let MAX_BUFFER_SIZE = 2
@@ -25,6 +26,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var checkButton: UIButton!
     var xButton: UIButton!
     var expandButton: UIButton!
+    let intro = "Welcome To Tinder Tips. Swift left if you find tip useful. Otherwise, swipe right."
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,7 +36,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         self.setupView()
-        exampleCardLabels = ["first", "second", "third", "fourth", "fifth", "sixth"]
+        exampleCardLabels = [intro]
         allCards = []
         loadedCards = []
         cardsLoadedIndex = 0
@@ -63,6 +65,10 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
         let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT))
         draggableView.information.text = exampleCardLabels[index]
+        draggableView.information.adjustsFontSizeToFitWidth = true
+        draggableView.information.numberOfLines = 5
+        
+        
         draggableView.delegate = self
         return draggableView
     }
@@ -161,6 +167,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
         return count
     }
+    
     
     
 }
