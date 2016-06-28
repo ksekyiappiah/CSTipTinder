@@ -26,7 +26,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var checkButton: UIButton!
     var xButton: UIButton!
     var expandButton: UIButton!
-    let intro = "Welcome To Tinder Tips. Swift left if you find tip useful. Otherwise, swipe right."
+    let intro = "Welcome To TipTinder. Swipe left if you find tip useful. Otherwise, swipe right."
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -36,7 +36,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         self.setupView()
-        exampleCardLabels = [intro]
+        exampleCardLabels = [intro, "first","second", "third", "last"]
         allCards = []
         loadedCards = []
         cardsLoadedIndex = 0
@@ -66,7 +66,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT))
         draggableView.information.text = exampleCardLabels[index]
         draggableView.information.adjustsFontSizeToFitWidth = true
-        draggableView.information.numberOfLines = 5
+        draggableView.information.numberOfLines = 10
         
         
         draggableView.delegate = self

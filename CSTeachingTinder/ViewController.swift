@@ -8,14 +8,13 @@
 
 import UIKit
 import WebKit
-import JavaScriptCore
+
+
+
 
 
 
 class ViewController: UIViewController, WKNavigationDelegate{
-    var showingFront = true
-    var front: UIImageView!
-    var back: UIImageView!
     
     private weak var webView: WKWebView!
     
@@ -23,8 +22,20 @@ class ViewController: UIViewController, WKNavigationDelegate{
 
 
     @IBAction func expandButton(sender: AnyObject) {
+    
+        // Set the page URL we want to download
+        let URL = NSURL(string: "http://iswift.org")
         
-        loadPage("https://dribbble.com/", partialContentQuerySelector: ".dribbbles.group")
+        // Try downloading it
+        do {
+            let htmlSource = try String(contentsOfURL: URL!, encoding: NSUTF8StringEncoding)
+            print(htmlSource)
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        
+        //loadPage("https://dribbble.com/", partialContentQuerySelector: ".dribbbles.group")
     
       
         
@@ -70,42 +81,9 @@ class ViewController: UIViewController, WKNavigationDelegate{
         return count
     }
     
-    private func createViews() {
-        userContentController = WKUserContentController()
-        
-        let configuration = WKWebViewConfiguration()
-        configuration.userContentController = userContentController
-        
-        let webView = WKWebView(frame: view.bounds, configuration: configuration)
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(webView)
-        
-        let views: [String: AnyObject] = ["webView": webView, "topLayoutGuide": topLayoutGuide]
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[topLayoutGuide][webView]|", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[topLayoutGuide][webView]|", options: [], metrics: nil, views: views))
-        
-        
-        self.webView = webView
-    }
+   
     
-    private func loadPage(urlString: String, partialContentQuerySelector selector: String) {
-        userContentController.removeAllUserScripts()
-        let userScript = WKUserScript(source: scriptWithDOMSelector(selector),
-                                      injectionTime: WKUserScriptInjectionTime.AtDocumentEnd,
-                                      forMainFrameOnly: true)
-        
-        userContentController.addUserScript(userScript)
-        
-        let url = NSURL(string: urlString)!
-        webView.loadRequest(NSURLRequest(URL: url))
-    }
     
-    private func scriptWithDOMSelector(selector: String) -> String {
-        let script =
-            "var selectedElement = document.querySelector('\(selector)');" +
-        "document.body.innerHTML = selectedElement.innerHTML;"
-        return script
-    }
-    
+   
 }
 
