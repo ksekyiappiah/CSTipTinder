@@ -8,6 +8,15 @@
 
 import UIKit
 import WebKit
+import Foundation
+
+
+
+let URLString = "http://charts.noaa.gov/BookletChart/AtlanticCoastBookletCharts.htm"
+
+class DataController {
+    var charts: [Chart]?
+}
 
 
 
