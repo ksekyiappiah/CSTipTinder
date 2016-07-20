@@ -8,13 +8,17 @@
 
 import Foundation
 import UIKit
+import Kanna
+
+
 
 
 
 class DraggableViewBackground: UIView, DraggableViewDelegate {
     var exampleCardLabels = [String]()
-    var actualCardLabels: [String] = []
+    var actualCardLabels = [String]()
     var allCards: [DraggableView]!
+    var myWebView: UIWebView!
     
     let MAX_BUFFER_SIZE = 2
     let CARD_HEIGHT: CGFloat = 386
@@ -38,7 +42,13 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         self.setupView()
+       
         exampleCardLabels = [intro, "first","second", "third", "last"]
+        
+        for var i = 0 ; i <= 10000; ++i {
+          
+            exampleCardLabels.append("sample text")
+        }
         actualCardLabels = []
         allCards = []
         loadedCards = []
@@ -62,24 +72,25 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     
         self.addSubview(xButton)
         self.addSubview(checkButton)
-       
+        
+      
+        
     }
-    func textStuff() -> Void {
-        if let url = NSURL(string: "https://www.hackingwithswift.com") {
-            do {
-                let contents = try NSString(contentsOfURL: url, usedEncoding: nil)
-                print(contents)
-            } catch {
-                // contents could not be loaded
-            }
-        } else {
-            // the URL was bad!
-        }
+    func displayURL() {
+        let webView = UIWebView(frame: self.bounds)
+        self.addSubview(webView)
+        
+        let URL = NSURL(string: "http://csteachingtips.org/random-tip")
+        webView.loadRequest(NSURLRequest(URL: URL!))
+        print(webView.loading)
     }
+
     
+  
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
         let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT))
         draggableView.information.text = exampleCardLabels[index]
+         draggableView.information.insertSubview(<#T##view: UIView##UIView#>, aboveSubview: <#T##UIView#>)
         draggableView.information.adjustsFontSizeToFitWidth = true
         draggableView.information.numberOfLines = 10
         
@@ -158,45 +169,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         dragView.leftClickAction()
     }
     
-    private func parseHTMLRow(rowElement: HTMLElement) -> Chart? {
-        var url: NSURL?
-        var number: Int?
-        var scale: Int?
-        var title: String?
-        // first column: URL and number
-        if let firstColumn = rowElement.childAtIndex(1) as? HTMLElement {
-            // skip the first row, or any other where the first row doesn't contain a number
-            if let urlNode = firstColumn.firstNodeMatchingSelector("a") {
-                if let urlString = urlNode.objectForKeyedSubscript("href") as? String {
-                    url = NSURL(string: urlString)
-                }
-                // need to make sure it's a number
-                let textNumber = firstColumn.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-                number = Int(textNumber)
-            }
-        }
-        if (url == nil || number == nil) {
-            return nil // can't do anything without a URL, e.g., the header row
-        }
-        
-        if let secondColumn = rowElement.childAtIndex(3) as? HTMLElement {
-            let text = secondColumn.textContent
-                .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-                .stringByReplacingOccurrencesOfString(",", withString: "")
-            scale = Int(text)
-        }
-        
-        if let thirdColumn = rowElement.childAtIndex(5) as? HTMLElement {
-            title = thirdColumn.textContent
-                .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-                .stringByReplacingOccurrencesOfString("\n", withString: "")
-        }
-        
-        if let title = title, url = url, number = number, scale = scale {
-            return Chart(title: title, url: url, number: number, scale: scale)
-        }
-        return nil
-    }
+
     
     
     

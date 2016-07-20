@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EBDC1C3E4AF069A3EABE70F5C130DFDCF5D68E21",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EBDC1C3E4AF069A3EABE70F5C130DFDCF5D68E21" : 0,
+    "76884B07661462B25FE27FB668771D1664D77332" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "04981524-585E-4B62-A50D-B3D6BE6F6003",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EBDC1C3E4AF069A3EABE70F5C130DFDCF5D68E21" : "CSTeachingTinder\/",
+    "76884B07661462B25FE27FB668771D1664D77332" : "CSTeachingTinder\/CSTeachingTinder\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CSTeachingTinder",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CSTeachingTinder.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ksekyiappiah\/CSTipTinder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76884B07661462B25FE27FB668771D1664D77332"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ksekyiappiah\/CSTipTinder",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EBDC1C3E4AF069A3EABE70F5C130DFDCF5D68E21"
+    }
+  ]
+}

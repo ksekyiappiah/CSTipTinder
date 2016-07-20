@@ -60,45 +60,13 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-jx-tze">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.91730594635009766" green="0.97179609537124634" blue="0.90289342403411865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="3C8-SB-ve9"/>
-                                    <constraint firstAttribute="height" constant="32" id="Kjs-a2-6zd"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="1" height="0.0"/>
-                                <state key="normal" title="EXPAND">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.53931629657745361" green="0.7491108775138855" blue="0.080677665770053864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3C8-SB-ve9"/>
-                                        <exclude reference="Kjs-a2-6zd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="3C8-SB-ve9"/>
-                                        <include reference="Kjs-a2-6zd"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="expandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jks-Pl-U5Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vJU-jx-tze" secondAttribute="bottom" constant="92" id="23j-Ao-gnN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8Nk-6c-TJg" secondAttribute="trailing" constant="58" id="8Km-o9-Fwj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eil-ne-Qoy" secondAttribute="trailing" constant="252" id="95P-wB-UTQ"/>
                             <constraint firstItem="eil-ne-Qoy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="9nG-zt-p8M"/>
                             <constraint firstItem="eil-ne-Qoy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="AYy-6e-ddN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vJU-jx-tze" secondAttribute="trailing" constant="135" id="AnX-3B-dtc"/>
-                            <constraint firstItem="vJU-jx-tze" firstAttribute="top" secondItem="8Nk-6c-TJg" secondAttribute="bottom" constant="571" id="HHO-he-UJC"/>
-                            <constraint firstItem="vJU-jx-tze" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="135" id="Nbf-4d-puF"/>
                             <constraint firstItem="eil-ne-Qoy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Nzm-lS-6Xw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eil-ne-Qoy" secondAttribute="trailing" constant="277" id="Wat-lm-qaM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eil-ne-Qoy" secondAttribute="trailing" constant="281" id="XXG-Ix-HQG"/>
@@ -114,9 +82,13 @@
                             <mask key="subviews">
                                 <exclude reference="eil-ne-Qoy"/>
                                 <exclude reference="8Nk-6c-TJg"/>
-                                <exclude reference="vJU-jx-tze"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8Km-o9-Fwj"/>
+                                <exclude reference="dXh-rh-fg0"/>
+                                <exclude reference="egE-Yh-PJU"/>
+                                <exclude reference="hEj-XR-7wW"/>
+                                <exclude reference="wKD-8H-SYX"/>
                                 <exclude reference="95P-wB-UTQ"/>
                                 <exclude reference="9nG-zt-p8M"/>
                                 <exclude reference="AYy-6e-ddN"/>
@@ -126,24 +98,19 @@
                                 <exclude reference="YnV-vk-udC"/>
                                 <exclude reference="bbz-0H-heB"/>
                                 <exclude reference="kmH-qZ-DKU"/>
-                                <exclude reference="8Km-o9-Fwj"/>
-                                <exclude reference="dXh-rh-fg0"/>
-                                <exclude reference="egE-Yh-PJU"/>
-                                <exclude reference="hEj-XR-7wW"/>
-                                <exclude reference="wKD-8H-SYX"/>
-                                <exclude reference="AnX-3B-dtc"/>
-                                <exclude reference="HHO-he-UJC"/>
-                                <exclude reference="Nbf-4d-puF"/>
-                                <exclude reference="23j-Ao-gnN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eil-ne-Qoy"/>
                                 <include reference="8Nk-6c-TJg"/>
-                                <include reference="vJU-jx-tze"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8Km-o9-Fwj"/>
+                                <include reference="dXh-rh-fg0"/>
+                                <include reference="egE-Yh-PJU"/>
+                                <include reference="hEj-XR-7wW"/>
+                                <include reference="wKD-8H-SYX"/>
                                 <include reference="95P-wB-UTQ"/>
                                 <include reference="9nG-zt-p8M"/>
                                 <include reference="AYy-6e-ddN"/>
@@ -153,15 +120,6 @@
                                 <include reference="YnV-vk-udC"/>
                                 <include reference="bbz-0H-heB"/>
                                 <include reference="kmH-qZ-DKU"/>
-                                <include reference="8Km-o9-Fwj"/>
-                                <include reference="dXh-rh-fg0"/>
-                                <include reference="egE-Yh-PJU"/>
-                                <include reference="hEj-XR-7wW"/>
-                                <include reference="wKD-8H-SYX"/>
-                                <include reference="AnX-3B-dtc"/>
-                                <include reference="HHO-he-UJC"/>
-                                <include reference="Nbf-4d-puF"/>
-                                <include reference="23j-Ao-gnN"/>
                             </mask>
                         </variation>
                     </view>

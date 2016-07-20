@@ -65,6 +65,8 @@ class DraggableView: UIView, WKNavigationDelegate {
         
         xFromCenter = 0
         yFromCenter = 0
+        
+        
     }
     
     func setupView() -> Void {
@@ -72,6 +74,8 @@ class DraggableView: UIView, WKNavigationDelegate {
         self.layer.shadowRadius = 3;
         self.layer.shadowOpacity = 0.2;
         self.layer.shadowOffset = CGSizeMake(1, 1);
+       
+        
     }
     
     func beingDragged(gestureRecognizer: UIPanGestureRecognizer) -> Void {

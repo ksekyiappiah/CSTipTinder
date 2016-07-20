@@ -9,14 +9,9 @@
 import UIKit
 import WebKit
 import Foundation
+import Kanna
 
 
-
-let URLString = "http://charts.noaa.gov/BookletChart/AtlanticCoastBookletCharts.htm"
-
-class DataController {
-    var charts: [Chart]?
-}
 
 
 
@@ -27,40 +22,18 @@ class ViewController: UIViewController, WKNavigationDelegate{
     
     private weak var webView: WKWebView!
     
+  
     private var userContentController: WKUserContentController!
-
-
-    @IBAction func expandButton(sender: AnyObject) {
-    
-        // Set the page URL we want to download
-        let URL = NSURL(string: "http://iswift.org")
-        
-        // Try downloading it
-        do {
-            let htmlSource = try String(contentsOfURL: URL!, encoding: NSUTF8StringEncoding)
-            print(htmlSource)
-        }
-        catch let error as NSError {
-            print("Ooops! Something went wrong: \(error)")
-        }
-        
-        //loadPage("https://dribbble.com/", partialContentQuerySelector: ".dribbbles.group")
-    
-      
-        
-      
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
         // Do any additional setup when loading the view.
         
-        let draggableBackground: DraggableViewBackground = DraggableViewBackground(frame: self.view.frame)
+       let draggableBackground: DraggableViewBackground = DraggableViewBackground(frame: self.view.frame)
         self.view.addSubview(draggableBackground)
         
-        
-    }
+            }
     
     
 
@@ -89,6 +62,7 @@ class ViewController: UIViewController, WKNavigationDelegate{
         
         return count
     }
+    
     
    
     

@@ -1,0 +1,6 @@
+framework module Pods_CSTeachingTinder {
+  umbrella header "Pods-CSTeachingTinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
