@@ -45,7 +45,7 @@
 		2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		2B0119491D11BD0400F28850 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		2B0119851D19B2F400F28850 /* HtmlCode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HtmlCode.html; sourceTree = "<group>"; };
-		2B822FF41D0F4DEA00FC8562 /* CSTeachingTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTeachingTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B822FF41D0F4DEA00FC8562 /* CS Tip Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS Tip Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B822FF91D0F4DEA00FC8562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B822FFC1D0F4DEA00FC8562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		2B822FF51D0F4DEA00FC8562 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B822FF41D0F4DEA00FC8562 /* CSTeachingTinder.app */,
+				2B822FF41D0F4DEA00FC8562 /* CS Tip Tinder.app */,
 				2B8230081D0F4DEA00FC8562 /* CSTeachingTinderTests.xctest */,
 				2B8230131D0F4DEA00FC8562 /* CSTeachingTinderUITests.xctest */,
 			);
@@ -181,7 +181,7 @@
 			);
 			name = CSTeachingTinder;
 			productName = CSTeachingTinder;
-			productReference = 2B822FF41D0F4DEA00FC8562 /* CSTeachingTinder.app */;
+			productReference = 2B822FF41D0F4DEA00FC8562 /* CS Tip Tinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2B8230071D0F4DEA00FC8562 /* CSTeachingTinderTests */ = {
@@ -232,6 +232,7 @@
 				TargetAttributes = {
 					2B822FF31D0F4DEA00FC8562 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5KR5QY2TCS;
 					};
 					2B8230071D0F4DEA00FC8562 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -493,10 +494,13 @@
 			baseConfigurationReference = 26E419A42A07E09297C1839C /* Pods-CSTeachingTinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CSTeachingTinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TeachingTips.CSTeachingTinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS Tip Tinder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -505,10 +509,13 @@
 			baseConfigurationReference = 0847A350D0F534FF6394C483 /* Pods-CSTeachingTinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CSTeachingTinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TeachingTips.CSTeachingTinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CS Tip Tinder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

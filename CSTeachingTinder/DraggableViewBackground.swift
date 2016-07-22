@@ -1,8 +1,8 @@
 //
 //  DraggableViewBackground.swift
-//  TinderSwipeCardsSwift
+//  CSTeachingTinder
 //
-//  Created by Gao Chao on 4/30/15.
+//  Created by cssummer16 on 6/13/16.
 //  Copyright (c) 2015 gcweb. All rights reserved.
 //
 

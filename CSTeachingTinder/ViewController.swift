@@ -43,26 +43,7 @@ class ViewController: UIViewController, WKNavigationDelegate{
     }
     
     
-    func countLikes() -> Int {
-        var count = 0
-        if canPerformAction(#selector(DraggableViewBackground.swipeLeft), withSender: DraggableView.self) {
-                count += 1
-         
-        }
-        
-        return count
-    }
-    
-    func countDislikes() -> Int {
-        var count = 0
-        if canPerformAction(#selector(DraggableViewBackground.swipeRight), withSender: DraggableView.self) {
-                count += 1
-          
-        }
-        
-        return count
-    }
-    
+ 
     
    
     
