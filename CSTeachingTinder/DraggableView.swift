@@ -184,6 +184,15 @@ class DraggableView: UIView, WKNavigationDelegate {
     }
     
     
+    func displayURL() {
+        let webView = UIWebView(frame: self.bounds)
+        self.addSubview(webView)
+        
+        let URL = NSURL(string: "http://csteachingtips.org/random-tip")
+        webView.loadRequest(NSURLRequest(URL: URL!))
+        print(webView.loading)
+    }
+    
    
    
 }

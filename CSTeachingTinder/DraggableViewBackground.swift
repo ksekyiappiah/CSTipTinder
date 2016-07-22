@@ -67,8 +67,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         checkButton.setImage(UIImage(named: "checkButton"), forState: UIControlState.Normal)
         checkButton.addTarget(self, action: "swipeRight", forControlEvents: UIControlEvents.TouchUpInside)
         
-       
-        
+      
     
         self.addSubview(xButton)
         self.addSubview(checkButton)
@@ -89,12 +88,10 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
   
     func createDraggableViewWithDataAtIndex(index: NSInteger) -> DraggableView {
         let draggableView = DraggableView(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT))
-        draggableView.information.text = exampleCardLabels[index]
-         draggableView.information.insertSubview(<#T##view: UIView##UIView#>, aboveSubview: <#T##UIView#>)
+       draggableView.information.text = exampleCardLabels[index]
+       
         draggableView.information.adjustsFontSizeToFitWidth = true
         draggableView.information.numberOfLines = 10
-        
-        
         draggableView.delegate = self
         return draggableView
     }
@@ -104,15 +101,19 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             let numLoadedCardsCap = exampleCardLabels.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : exampleCardLabels.count
             for var i = 0; i < exampleCardLabels.count; i++ {
                 let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(i)
+             
                 allCards.append(newCard)
+                
                 if i < numLoadedCardsCap {
                     loadedCards.append(newCard)
+                    newCard.displayURL()
                 }
             }
             
             for var i = 0; i < loadedCards.count; i++ {
                 if i > 0 {
                     self.insertSubview(loadedCards[i], belowSubview: loadedCards[i - 1])
+                    
                 } else {
                     self.addSubview(loadedCards[i])
                 }
@@ -126,6 +127,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
         if cardsLoadedIndex < allCards.count {
             loadedCards.append(allCards[cardsLoadedIndex])
+            allCards[cardsLoadedIndex].displayURL()
             cardsLoadedIndex = cardsLoadedIndex + 1
             self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
         }
@@ -136,6 +138,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
         if cardsLoadedIndex < allCards.count {
             loadedCards.append(allCards[cardsLoadedIndex])
+            allCards[cardsLoadedIndex].displayURL()
             cardsLoadedIndex = cardsLoadedIndex + 1
             self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
         }
