@@ -45,6 +45,7 @@
 		2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		2B0119491D11BD0400F28850 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		2B099BA51D4685CE001AB511 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2B099BA71D46951F001AB511 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2B822FF41D0F4DEA00FC8562 /* CS Tip Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS Tip Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B822FF91D0F4DEA00FC8562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		851B396BD17E9DB14DC78714 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B099BA71D46951F001AB511 /* iAd.framework */,
 				E90413178F9A507200F417CE /* Pods_CSTeachingTinder.framework */,
 			);
 			name = Frameworks;

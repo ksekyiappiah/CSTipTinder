@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B822FF31D0F4DEA00FC8562"
-               BuildableName = "CSTeachingTinder.app"
+               BuildableName = "CS Tip Tinder.app"
                BlueprintName = "CSTeachingTinder"
                ReferencedContainer = "container:CSTeachingTinder.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B822FF31D0F4DEA00FC8562"
-            BuildableName = "CSTeachingTinder.app"
+            BuildableName = "CS Tip Tinder.app"
             BlueprintName = "CSTeachingTinder"
             ReferencedContainer = "container:CSTeachingTinder.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B822FF31D0F4DEA00FC8562"
-            BuildableName = "CSTeachingTinder.app"
+            BuildableName = "CS Tip Tinder.app"
             BlueprintName = "CSTeachingTinder"
             ReferencedContainer = "container:CSTeachingTinder.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B822FF31D0F4DEA00FC8562"
-            BuildableName = "CSTeachingTinder.app"
+            BuildableName = "CS Tip Tinder.app"
             BlueprintName = "CSTeachingTinder"
             ReferencedContainer = "container:CSTeachingTinder.xcodeproj">
          </BuildableReference>

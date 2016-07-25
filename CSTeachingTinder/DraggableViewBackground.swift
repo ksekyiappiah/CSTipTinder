@@ -32,7 +32,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var checkButton: UIButton!
     var xButton: UIButton!
     var expandButton: UIButton!
-    let intro = "Welcome To TipTinder. Swipe left or right to view CS teaching tips. Begin by swiping any direction."
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
