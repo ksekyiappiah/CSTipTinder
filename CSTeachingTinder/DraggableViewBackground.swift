@@ -43,11 +43,11 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.layoutSubviews()
         self.setupView()
        
-        exampleCardLabels = [intro]
+        exampleCardLabels = []
         
         for var i = 0 ; i <= 10000; ++i {
           
-            exampleCardLabels.append("sample text")
+            exampleCardLabels.append("No Internet Connection")
         }
         actualCardLabels = []
         allCards = []
@@ -109,7 +109,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
                 
                 if i < numLoadedCardsCap {
                     loadedCards.append(newCard)
-                    newCard.displayURL()
+                    if Reachability.isConnectedToNetwork() == true {
+                        newCard.displayURL()
+                    } else {
+                        print("Internet connection FAILED")
+                        var alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+                        alert.show()
+                    }
+                    
                 }
                 
             }
@@ -131,9 +138,17 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
         if cardsLoadedIndex < allCards.count {
             loadedCards.append(allCards[cardsLoadedIndex])
-            allCards[cardsLoadedIndex].displayURL()
-            cardsLoadedIndex = cardsLoadedIndex + 1
-            self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+            if Reachability.isConnectedToNetwork() == true {
+                allCards[cardsLoadedIndex].displayURL()
+                cardsLoadedIndex = cardsLoadedIndex + 1
+                self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+            } else {
+                print("Internet connection FAILED")
+                var alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+
+         
         }
     }
     
@@ -142,9 +157,16 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
         if cardsLoadedIndex < allCards.count {
             loadedCards.append(allCards[cardsLoadedIndex])
-            allCards[cardsLoadedIndex].displayURL()
-            cardsLoadedIndex = cardsLoadedIndex + 1
-            self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+            if Reachability.isConnectedToNetwork() == true {
+                allCards[cardsLoadedIndex].displayURL()
+                cardsLoadedIndex = cardsLoadedIndex + 1
+                self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+            } else {
+                print("Internet connection FAILED")
+                var alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+           
         }
     }
     

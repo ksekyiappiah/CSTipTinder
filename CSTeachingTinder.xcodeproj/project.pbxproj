@@ -10,7 +10,7 @@
 		2B0119461D11BBA900F28850 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119451D11BBA900F28850 /* DraggableView.swift */; };
 		2B0119481D11BC8200F28850 /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */; };
 		2B01194A1D11BD0400F28850 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0119491D11BD0400F28850 /* OverlayView.swift */; };
-		2B0119861D19B2F400F28850 /* HtmlCode.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B0119851D19B2F400F28850 /* HtmlCode.html */; };
+		2B099BA61D4685CE001AB511 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B099BA51D4685CE001AB511 /* Reachability.swift */; };
 		2B822FF81D0F4DEA00FC8562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */; };
 		2B822FFA1D0F4DEA00FC8562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B822FF91D0F4DEA00FC8562 /* ViewController.swift */; };
 		2B822FFD1D0F4DEA00FC8562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B822FFB1D0F4DEA00FC8562 /* Main.storyboard */; };
@@ -44,7 +44,7 @@
 		2B0119451D11BBA900F28850 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		2B0119491D11BD0400F28850 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
-		2B0119851D19B2F400F28850 /* HtmlCode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HtmlCode.html; sourceTree = "<group>"; };
+		2B099BA51D4685CE001AB511 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2B822FF41D0F4DEA00FC8562 /* CS Tip Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS Tip Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B822FF91D0F4DEA00FC8562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,13 +115,13 @@
 				2B822FF71D0F4DEA00FC8562 /* AppDelegate.swift */,
 				2B822FF91D0F4DEA00FC8562 /* ViewController.swift */,
 				2B0119471D11BC8200F28850 /* DraggableViewBackground.swift */,
-				2B0119851D19B2F400F28850 /* HtmlCode.html */,
 				2B0119451D11BBA900F28850 /* DraggableView.swift */,
 				2B0119491D11BD0400F28850 /* OverlayView.swift */,
 				2B822FFB1D0F4DEA00FC8562 /* Main.storyboard */,
 				2B822FFE1D0F4DEA00FC8562 /* Assets.xcassets */,
 				2B8230001D0F4DEA00FC8562 /* LaunchScreen.storyboard */,
 				2B8230031D0F4DEA00FC8562 /* Info.plist */,
+				2B099BA51D4685CE001AB511 /* Reachability.swift */,
 			);
 			path = CSTeachingTinder;
 			sourceTree = "<group>";
@@ -269,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0119861D19B2F400F28850 /* HtmlCode.html in Resources */,
 				2B8230021D0F4DEA00FC8562 /* LaunchScreen.storyboard in Resources */,
 				2B822FFF1D0F4DEA00FC8562 /* Assets.xcassets in Resources */,
 				2B822FFD1D0F4DEA00FC8562 /* Main.storyboard in Resources */,
@@ -347,6 +346,7 @@
 			files = (
 				2B0119481D11BC8200F28850 /* DraggableViewBackground.swift in Sources */,
 				2B0119461D11BBA900F28850 /* DraggableView.swift in Sources */,
+				2B099BA61D4685CE001AB511 /* Reachability.swift in Sources */,
 				2B822FFA1D0F4DEA00FC8562 /* ViewController.swift in Sources */,
 				2B822FF81D0F4DEA00FC8562 /* AppDelegate.swift in Sources */,
 				2B01194A1D11BD0400F28850 /* OverlayView.swift in Sources */,
