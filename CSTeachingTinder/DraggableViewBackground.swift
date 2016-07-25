@@ -32,7 +32,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var checkButton: UIButton!
     var xButton: UIButton!
     var expandButton: UIButton!
-    let intro = "Welcome To TipTinder. Swipe left if you find tip useful. Otherwise, swipe right."
+    let intro = "Welcome To TipTinder. Swipe left or right to view CS teaching tips. Begin by swiping any direction."
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -43,7 +43,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.layoutSubviews()
         self.setupView()
        
-        exampleCardLabels = [intro, "first","second", "third", "last"]
+        exampleCardLabels = [intro]
         
         for var i = 0 ; i <= 10000; ++i {
           
@@ -75,6 +75,9 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
       
         
     }
+    
+   
+    
     func displayURL() {
         let webView = UIWebView(frame: self.bounds)
         self.addSubview(webView)
@@ -108,6 +111,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
                     loadedCards.append(newCard)
                     newCard.displayURL()
                 }
+                
             }
             
             for var i = 0; i < loadedCards.count; i++ {
