@@ -22,7 +22,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     
     let MAX_BUFFER_SIZE = 2
     let CARD_HEIGHT: CGFloat = 386
-    let CARD_WIDTH: CGFloat = 290
+    let CARD_WIDTH: CGFloat = 350
     
     
     var cardsLoadedIndex: Int!
@@ -59,11 +59,11 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     func setupView() -> Void {
         self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         
-        xButton = UIButton(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2 + 35, self.frame.size.height/2 + CARD_HEIGHT/2 + 10, 59, 59))
+        xButton = UIButton(frame: CGRectMake((self.frame.size.width - CARD_WIDTH)/2 + 45, self.frame.size.height/2 + CARD_HEIGHT/2 + 35, 70, 70))
         xButton.setImage(UIImage(named: "xButton"), forState: UIControlState.Normal)
         xButton.addTarget(self, action: "swipeLeft", forControlEvents: UIControlEvents.TouchUpInside)
         
-        checkButton = UIButton(frame: CGRectMake(self.frame.size.width/2 + CARD_WIDTH/2 - 85, self.frame.size.height/2 + CARD_HEIGHT/2 + 10, 59, 59))
+        checkButton = UIButton(frame: CGRectMake(self.frame.size.width/2 + CARD_WIDTH/2 - 110, self.frame.size.height/2 + CARD_HEIGHT/2 + 35, 70, 70))
         checkButton.setImage(UIImage(named: "checkButton"), forState: UIControlState.Normal)
         checkButton.addTarget(self, action: "swipeRight", forControlEvents: UIControlEvents.TouchUpInside)
         

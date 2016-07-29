@@ -3,7 +3,7 @@
 //  CSTeachingTinder
 //
 //  Created by cssummer16 on 6/13/16.
-//  Copyright © 2016 cssummer16. All rights reserved.
+//  Copyright (c) 2015 gcweb. All rights reserved.
 //
 
 import UIKit
